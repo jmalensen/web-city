@@ -1,0 +1,16 @@
+a {
+    color: $link_color;
+    
+    &:hover{
+        color: $link_color;
+    }
+}
+
+::selection{
+    background: $primary_color;
+    color: #fff;
+}
+
+html, body{
+    color: $text_color;
+}

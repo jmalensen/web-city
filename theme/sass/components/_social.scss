@@ -1,0 +1,64 @@
+.social{
+    background-color: $secondary-color;
+    padding: 25px;
+    
+    p{
+        font-size: 40px;
+        line-height: 1;
+        @extend .font-bold;
+        word-break: keep-all;
+        margin-bottom: 20px;
+        
+        @include tablet{
+            font-size: 45px;
+        }
+        
+        @include laptop{
+            font-size: 55px;
+        }
+        
+    }
+    
+    &__list{
+        
+        a{
+            display: inline-block;
+            margin-left: 15px;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            border: 2px solid $dark-color;
+            position: relative;
+            transition: all 0.3s ease;
+
+            &:last-child{
+                margin-left: 0;
+            }
+
+            svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                max-width: 70%;
+                max-height: 70%;
+                *{
+                    fill: $dark-color;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            &:hover{
+                background-color: $dark-color;
+
+                svg *{
+                    fill: $secondary-color;
+                }
+
+            }
+
+        }
+        
+    }
+    
+}

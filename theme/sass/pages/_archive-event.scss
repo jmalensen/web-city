@@ -1,0 +1,40 @@
+.archiveEvent{
+    
+    &__search{
+        padding: 30px 0;
+        background: transparent url('../images/bg_dots.svg') left top repeat;
+        background-size: 6px;
+        
+        @include tablet{
+            padding: 50px 0;
+        }
+        
+        .dateSearch{
+            margin-top: 35px;
+        }
+
+        .keywordSearch{
+            margin-top: 35px;
+        }
+        
+    }
+    
+    &__list{
+        padding: 30px 0;
+        
+        @include tablet{
+            padding: 110px 0 180px;
+            background-image: url('../images/bg_yellow_circles.svg'), url('../images/bg_blue_waves.svg');
+            background-position: top right, left bottom;
+            background-repeat: no-repeat;
+            background-size: 30% auto, 40% auto;
+            @media (min-width: 1300px) {
+                background-size: 380px auto, 420px auto;
+            }
+        }
+        
+    }
+    
+    
+    
+}

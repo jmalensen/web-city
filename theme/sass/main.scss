@@ -1,0 +1,63 @@
+@charset 'UTF-8';
+
+// 1. Vendors
+@import
+  'vendors/bootstrap/bootstrap',
+  'vendors/animate/animate';
+
+// 2. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// 3. Base stuff
+@import
+  'base/colors',
+  'base/fonts',
+  'base/animation',
+  'base/typography';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/main',
+  'layout/aside',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/header-nav',
+  'components/currentNews',
+  'components/quick-access',
+  'components/one-click',
+  'components/search-bloc',
+  'components/event',
+  'components/news',
+  'components/discover',
+  'components/directory',
+  'components/infowindow',
+  'components/category',
+  'components/calendar',
+  'components/date-search',
+  'components/keyword-search',
+  'components/social',
+  'components/banner',
+  'components/title',
+  'components/lines',
+  'components/forms',
+  'components/post-list',
+  'components/pagination',
+  'components/button';
+
+// 6. Page-specific styles
+@import
+  'pages/singular',
+  'pages/front-page',
+  'pages/generic-page',
+  'pages/site-map',
+  'pages/archive-event',
+  'pages/404',
+  'pages/archive-directory',
+  'pages/interactive-map',
+  'pages/archive-news',
+  'pages/search-results';

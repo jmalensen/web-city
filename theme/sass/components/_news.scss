@@ -1,0 +1,162 @@
+.news{
+    
+    &__item{
+        display: block;
+        color: $text_color;
+        margin-top: 20px;
+        margin:0 10px 40px 10px;
+        
+        background:$light_color;
+        img{
+            width: 100%;
+        }
+
+        .imgDate{
+            position: relative;
+
+            &__over{
+
+                position: absolute;
+                width: calc(100% - 50px);
+                height: calc(100% - 70px);
+                background-color: rgba($light_color,0.5);
+                top: 25px;
+                left: 25px;
+
+                transform: scale(0);
+                opacity: 0;
+                transition: all 0.3s ease;
+
+                &:before, &:after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background-color: $light_color;
+                    transform: translate(-50%,-50%);
+                }
+                &:before{
+                    width: 60px;
+                    height: 6px;
+                }
+                &:after{
+                    height: 60px;
+                    width: 6px;
+                }
+            }
+            .cat{
+                position:relative;
+                top:-14px;
+                z-index:10;
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: center;
+                &__item{
+                    display: inline-block;
+                    padding:3px 6px;
+                    
+                    text-transform: uppercase;
+                    font-size:18px;
+                    background: $light_color;
+                    border:1px solid $dark_color;
+                    &:first-child{
+                        margin-right:10px;
+                    }
+                }
+            }
+        }
+
+        .content{
+            padding:5px 20px 30px 20px;
+            position: relative;
+            border-bottom: 3px solid $dark-color;
+            transition: all 0.2s ease;
+            background-color: $light-color;
+
+            .plus{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                height: 25px;
+                width: 25px;
+                background-color: $dark-color;
+                transition: background 0.2s ease;
+
+                &:after, &:before{
+                    content: '';
+                    position: absolute;
+                    background-color: $light-color;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                }
+
+                &:before{
+                    height: 2px;
+                    width: 60%;
+                }
+
+                &:after{
+                    width: 2px;
+                    height: 60%;
+                }
+            }
+        }
+
+        h3{
+            margin: 0 0 8px;
+            font-size: 26px;
+        }
+
+        p{
+            margin: 0;
+            line-height: 1;
+        }
+
+        &:hover, &:focus{
+            text-decoration: none;
+            color: $text-color;
+
+            .imgDate__over{
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            .content{
+                border-bottom-color: $tertiary-color;
+                .plus{
+                    background-color: $tertiary-color;
+                }
+            }
+        }
+    }
+    
+    @include mobile-min{
+        .news__item{
+            width: calc(50% - 20px);
+            float: left;
+            padding-right: 0px;
+
+/*            &:nth-child(2){
+                padding-left: 10px;
+                padding-right: 0;
+            }*/
+        }
+    }
+
+    @include tablet{
+        .news__item{
+        }
+    }
+    
+    @include laptop{
+        .news__item{
+            width:calc((100% / 3) - 20px);
+            /*padding:0 10px;*/
+/*            &:nth-child(2){
+                padding-left: 10px;
+                padding-right: 10px;
+            }*/
+        }
+    }
+}

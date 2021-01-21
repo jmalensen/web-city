@@ -1,0 +1,107 @@
+.serchBloc{
+    
+    padding: 50px 0 35px;
+    background: $light_color url('../images/bg_search.svg') center center no-repeat;
+    background-size: cover;
+    
+    @include tablet{
+        padding: 60px 0 45px;
+    }
+    
+    form{
+        @extend .clearfix;
+        max-width: 650px;
+        margin: 0 auto;
+        
+        input[type="search"]{
+            width: calc(100% - 50px);
+            height: 50px;
+            @extend .font-bold;
+            float: left;
+            outline: none;
+            padding: 20px;
+            font-size: 30px;
+            
+            @include tablet{
+                width: calc(100% - 70px);
+                height: 70px;
+                font-size: 45px;
+            }
+            
+            &::placeholder{
+                color: $text_color;
+            }
+            
+            &:focus{
+                
+                + input[type="submit"]{
+                    background-color: $tertiary_color;
+                }
+                
+            }
+            
+            
+            
+        }
+        
+        input[type="submit"]{
+            height: 50px;
+            width: 50px;
+            float: left;
+            outline: none;
+            overflow: hidden;
+            white-space: nowrap;
+            text-indent: 200%;
+            border: 0;
+            box-shadow: none;
+            background: $dark_color url('../images/icon_search.svg') center center no-repeat;
+            background-size: 55%;
+            transition: all 0.2s ease;
+            
+            @include tablet{
+                height: 70px;
+                width: 70px;
+            }
+            
+            &:hover{
+                background-color: $tertiary_color;
+                background-size: 65%;
+            }
+            
+        }
+        
+    }
+    
+    &__keyword{
+        
+        margin-top: 25px;
+        text-align: center;
+        
+        &__item{
+            @extend .font-bold;
+            display: inline-block;
+            border: 2px solid $dark_color;
+            background-color: $light_color;
+            text-transform: lowercase;
+            padding: 6px 8px;
+            color: $text_color;
+            margin: 0 8px 15px;
+            transition: all 0.2s ease;
+            font-size: 20px;
+            
+            &:hover, &:focus{
+                text-decoration: none;
+                color: $light_color;
+                background-color: $tertiary_color;
+                border-color: $tertiary_color;
+            }
+            
+            @include tablet{
+                font-size: 28px;
+            }
+            
+        }
+        
+    }
+    
+}

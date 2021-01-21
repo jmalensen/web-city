@@ -1,0 +1,154 @@
+.mainFooter{
+    
+    //Bandeau principal du footer
+    &__primary{
+            
+        background-color: $primary_color;
+        padding-bottom: 40px;
+        color: $light_color;
+        
+        .logo{
+            img{
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+        
+        .contact, .horaire, .nav-footer{
+            padding-top: 40px;
+            text-align: center;
+            @include tablet{
+                text-align: left;
+                padding-top: 60px;
+            }
+        }
+        
+        .contact{
+            
+            *{
+                margin: 0 0 2px;
+            }
+            
+            h2{
+                font-size: 32px;
+            }
+            
+            &__social{
+                
+                margin-top: 10px;
+                
+                a{
+                    display: inline-block;
+                    margin-left: 10px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    border: 2px solid #fff;
+                    position: relative;
+                    transition: all 0.4s ease;
+                    
+                    &:last-child{
+                        margin-left: 0;
+                    }
+                    
+                    svg{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        max-width: 70%;
+                        max-height: 70%;
+                        *{
+                            transition: all 0.4s ease;
+                        }
+                    }
+                    
+                    &:hover{
+                        background-color: #fff;
+                        
+                        svg *{
+                            fill: $primary_color;
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        .horaire{
+            
+            @include laptop{
+                margin-top: 7px;
+            }
+            
+            *{
+                margin: 0 0 2px;
+            }
+            
+            h3{
+                font-size: 22px;
+            }
+            
+        }
+        
+        .nav-footer{
+            @include laptop{
+                margin-top: 5px;
+            }
+            
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                
+                li{
+                    
+                    a{
+                        color: $light_color;
+                        font-size: 20px;
+                    }
+                    
+                }
+                
+            }
+            
+        }
+            
+    }
+    
+    //Bandeau secondaire du footer
+    &__secondary{
+        
+        padding: 20px 10px;
+        
+        ul{
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            
+            li{
+                line-height: 1;
+                display: inline-block;
+                &:after{
+                    content: ' • ';
+                    font-size: 28px;
+                    color: $primary_color;
+                }
+                &:last-child{
+                    &:after{
+                        content: '';
+                    }
+                }
+                
+            }
+            
+            
+        }
+        
+    }
+    
+}

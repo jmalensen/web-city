@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Noyh";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/noyh-bold.eot") format("eot"),
+        url("../fonts/noyh-bold.woff2") format("woff2"),
+        url("../fonts/noyh-bold.woff") format("woff"),
+        url("../fonts/noyh-bold.svg") format("svg"),
+        url("../fonts/noyh-bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Noyh";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/noyh-light.eot") format("eot"),
+        url("../fonts/noyh-light.woff2") format("woff2"),
+        url("../fonts/noyh-light.woff") format("woff"),
+        url("../fonts/noyh-light.svg") format("svg"),
+        url("../fonts/noyh-light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Noyh";
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/noyh-light-italic.eot") format("eot"),
+        url("../fonts/noyh-light-italic.woff2") format("woff2"),
+        url("../fonts/noyh-light-italic.woff") format("woff"),
+        url("../fonts/noyh-light-italic.svg") format("svg"),
+        url("../fonts/noyh-light-italic.ttf") format("truetype");
+}
+
+.font
+{
+	&-light
+	{
+		font-weight: 300;
+	}
+
+	&-regular
+	{
+		font-weight: 400;
+	}
+
+	&-semibold
+	{
+		font-weight: 600;
+	}
+
+	&-bold
+	{
+		font-weight: 700;
+	}
+
+	&-extrabold
+	{
+		font-weight: 800;
+	}
+
+	&-noyh
+	{
+		font-family: 'Noyh', 'Helvetica', sans-serif;
+	}
+}

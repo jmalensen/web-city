@@ -1,0 +1,105 @@
+.calendar{
+    
+    .ci-calendar-shortcode{
+        
+        .ui-datepicker-header{
+            background-color: $tertiary-color;
+            color: $light-color;
+            padding: 15px 0;
+            max-width: 400px;
+            margin: 0 auto;
+            
+            .ui-datepicker-month, .ui-datepicker-year{
+                text-transform: uppercase;
+                font-size: 28px;
+            }
+            
+            .ui-datepicker-prev{
+                margin-left:8px;
+            }
+            .ui-datepicker-next{
+                margin-right:8px;
+            }
+            .ui-datepicker-next, .ui-datepicker-prev{
+                display: inline-block;
+                width: 100%;//40px;
+                height: 28px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-indent: 200%;
+            }
+            
+            .ui-datepicker-next{
+                background: transparent url('../images/arrowright.svg') center center no-repeat;
+                background-size: 60px;
+            }
+            
+            .ui-datepicker-prev{
+                background: transparent url('../images/arrowleft.svg') center center no-repeat;
+                background-size: 60px;
+            }
+            
+        }
+        
+        table{
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            
+            thead{
+                display: none;
+            }
+            
+            td, th{
+                border: 2px solid $dark-color;
+                width: 14.285%;
+                height: 35px;
+                line-height: 35px;
+                background-color: $light-color;
+                
+                .ui-state-default{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;                    
+                }
+                
+                a{
+                    background-color: $tertiary-color;
+                    color: $light-color;
+                    @extend .font-bold;
+                    transition: background 0.2s ease;
+                    
+                    &:hover{
+                        text-decoration: none;
+                        background-color: $dark-color;
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    &__seeAll{
+        display: block;
+        max-width: 400px;
+        margin: 0 auto;
+        background: $dark-color url('../images/arrowright_all.svg') center right 15px no-repeat;
+        background-size: auto 70%;
+        color: $light-color;
+        padding: 15px;
+        text-transform: uppercase;
+        transition: background 0.2s ease;
+        
+        &:hover, &:focus{
+            text-decoration: none;
+            color: $light-color;
+            background-color: $tertiary-color;
+        }
+        
+    }
+    
+}

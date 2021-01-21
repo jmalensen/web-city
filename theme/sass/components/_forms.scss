@@ -1,0 +1,213 @@
+.gform_wrapper form {
+    
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: $light-color url('../images/bg_dots.svg') left top repeat;
+    background-size: 6px;
+    padding: 15px;
+    
+    @include tablet{
+        padding: 20px;
+    }
+    
+    .validation_error{
+        color: $error_color;
+        margin-bottom: 15px;
+        @extend .font-bold;
+    }
+	
+    .gform_fields{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .gfield{
+        margin-bottom: 25px;
+        
+        label{
+            margin-bottom: 3px;
+        }
+        
+        input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="date"], input[type="tel"], select, textarea{
+            border: 0;
+            border-bottom: 5px solid $dark_color !important;
+            border-radius: 0;
+            box-shadow: none;
+            height: 45px; 
+            padding: 10px;
+            @extend .font-bold;
+            font-size: $font_size_normal - 4;
+            color: $text-color;
+            outline: none;
+            
+            &:focus{
+                border-bottom-color: $secondary_color !important;
+                box-shadow: none;
+            }
+            
+            @include tablet{
+                font-size: $font_size_normal;
+            }
+            
+        }
+        
+        option{
+            padding: 10px;
+        }
+        
+        textarea{
+            height: 150px;
+        }
+        
+        &.gfield_error{
+            
+            input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="date"], input[type="tel"], select, textarea{
+                border-bottom-color: $error_color !important;
+            }
+            
+        }
+        
+    }
+    
+    .gfield_checkbox{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li{
+            padding: 5px 0;
+        }
+
+        input{
+
+            visibility: hidden; 
+            position: absolute;
+
+            &:checked, &[readonly=readonly]{
+
+                + label{
+                    &:before{
+                        color: $light-color;
+                        background-color: $dark-color;
+                        background-size: 60% auto;
+                    }
+                }
+
+            }
+
+        }
+
+        label{
+
+            padding-left: 0px;
+
+            &:before{
+                content: '';
+                width: 28px;
+                height: 28px;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 16px;
+                background-color: $light-color;
+                border: 2px solid $dark-color;
+                color: transparent;
+                text-align: center;
+                float: left;
+                margin: -2px 10px 0;
+            }
+
+        }
+
+    }
+    
+    .gfield_radio{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li{
+            padding: 5px 0;
+        }
+
+        input{
+
+            visibility: hidden; 
+            position: absolute;
+
+            &:checked, &[readonly=readonly]{
+
+                + label{
+                    &:before{
+                        color: $light-color;
+                        background-color: $dark-color;
+                        background-size: 60% auto;
+                    }
+                }
+
+            }
+
+        }
+
+        label{
+
+            padding-left: 0px;
+
+            &:before{
+                content: '';
+                width: 28px;
+                height: 28px;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 16px;
+                border-radius: 100%;
+                background-color: $light-color;
+                border: 2px solid $dark-color;
+                color: transparent;
+                text-align: center;
+                float: left;
+                margin: -2px 10px 0;
+            }
+
+        }
+
+    }
+    
+    .gform_footer{
+        
+        .btn{
+            box-shadow: none;
+            border: 0;
+            border-radius: 0;
+            outline: none;
+            background-color: $dark-color;
+            text-transform: uppercase;
+            color: $light-color;
+            @extend .font-bold;
+            font-size: 24px;
+            padding: 6px 15px;
+            transition: background 0.2s ease;
+            
+            &:hover, &:focus{
+                background-color: $tertiary-color;
+            }
+            
+        }
+        
+    }
+    
+}
+
+input, select, textarea{
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    pading: 10px !important;
+    outline: none !important;
+
+    &:focus{
+        box-shadow: none !important;
+    }
+
+}

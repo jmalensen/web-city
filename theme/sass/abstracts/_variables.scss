@@ -1,0 +1,50 @@
+// == Colors (better to use $name_name than $name-name)
+$primary_color: #24246c; //violet
+$secondary_color: #fdc600; //jaune
+$tertiary_color: #00acc9; //bleu clair
+
+$directory-color: #ee736c;
+$map-color: #008f70;
+
+$error_color: #ee736c;
+
+$text_color: #000000;
+
+$dark_color: #000000;
+$light_color: #ffffff;
+
+$link_color: $primary_color;
+
+
+//== Screen width
+$min-xs: $screen-xs-min;
+$max-xs: $screen-xs-max;
+$min-sm: $screen-sm-min;
+$max-sm: $screen-sm-max;
+$min-md: $screen-md-min;
+$max-md: $screen-md-max;
+$min-lg: $screen-lg-min;
+
+//== Fonts size (todo: penser à utiliser ces variables y compris sur les titres de tailles différentes)
+$font_size_largest  : 50px;
+$font_size_larger   : 42px;
+$font_size_large    : 35px;
+$font_size_normal   : 22px;
+
+//== Sizes and margin
+$size_width_logo:200px;
+$size_width_logo_mobile:180px;
+$size_margin_logo:30px;
+$size_width_menu:calc(100% - #{$size_width_logo} - #{$size_margin_logo});
+
+$size_search_form_desktop:calc(100% + #{$size_width_logo} + #{$size_margin_logo});
+$size_width_btn_form_desktop:60px;
+$size_width_input_form_desktop:calc(100% - #{$size_width_btn_form_desktop});
+
+$size_height_menu_fixed:150px;
+
+//Page type
+$size_element_third_of_size:calc(100% / 3);
+$size_element_fourth_of_size:calc(100% / 4);
+$size_margin_structure:30px;
+$size_element_structure:calc((100% / 2) - (#{$size_margin_structure} / 2));

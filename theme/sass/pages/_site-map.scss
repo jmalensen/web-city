@@ -1,0 +1,12 @@
+.siteMap{
+    
+    &__container{
+        padding: 30px 0;
+        
+        @include tablet{
+            padding: 80px 0;
+        }
+        
+    }
+    
+}

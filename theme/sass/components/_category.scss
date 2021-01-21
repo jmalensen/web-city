@@ -1,0 +1,84 @@
+.category{
+    
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    
+    &__title{
+        @extend .font-bold;
+        font-size: 30px;
+        margin: 0 0 15px;
+        line-height: 1;
+        
+        @include tablet{
+            font-size: 40px;
+        }
+        
+        @include laptop{
+            font-size: 45px;
+        }
+        
+    }
+    
+    &__item{
+        display: inline-block;
+        color: $text-color;
+        @extend .font-bold;
+        font-size: 19px;
+        position: relative;
+        padding-left: 30px;
+        margin-right: 25px;
+        margin-bottom: 10px;
+        
+        @include tablet{
+            font-size: 24px;
+        }
+        
+        @include laptop{
+            font-size: 28px;
+        }
+        
+        &:last-child{
+            margin-right: 0;
+        }
+        
+        
+        &:before{
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: $light-color;
+            border: 2px solid $dark-color;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        &:hover, &:focus{
+            color: $text-color;
+            text-decoration: none;
+            
+            &:before{
+                background-color: $dark-color;
+            }
+            
+        }
+        
+        &--active{
+            &:before{
+                background-color: $dark-color;
+            }
+            
+            &:hover, &:focus{
+                &:before{
+                    background-color: $light-color;
+                }
+            }
+            
+        }
+        
+    }
+    
+}

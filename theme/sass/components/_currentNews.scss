@@ -1,0 +1,179 @@
+// COMPOSANT actualité du moment (présent sur la home)
+
+.currentNews{
+    
+    height: 400px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+    @include tablet{
+        height: 460px;
+    }
+    
+    @include laptop{
+        height: 560px;
+    }
+    
+    @include desktop{
+        height: 600px;
+    }
+    
+    @media (min-width:1400px){
+        height: 700px;
+    }
+    
+    .container{
+        height: 100%;
+        position: relative;
+    }
+    
+    &__bloc{
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        bottom: 15px;
+        color: $light_color;
+        display: block;
+        max-width: 450px;
+        
+        @include tablet{
+            left: 15px;
+            width: 65%;
+            bottom: 30px;
+            max-width: none;
+        }
+        
+        @include laptop{
+            width: 50%;
+            bottom: 55px;
+        }
+        
+         @include desktop{
+            bottom: 70px; 
+        }
+        
+        &:hover, &:focus{
+            text-decoration: none;
+            color: $light_color;
+            
+            .currentNews__button{
+                
+                &:before, &:after{
+                    transform: translate(-50%,-50%) rotate(180deg);
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    &__category{
+        margin-bottom: 10px;
+        font-size: 0;
+        
+        @include tablet{
+            margin-bottom: 15px;
+        }
+        
+        &__item{
+            display: inline-block;
+            padding: 5px 8px;
+            background-color: $secondary_color;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 15px;
+            
+            @include tablet{
+                font-size: 18px;
+            }
+            
+            @include laptop{
+                font-size: 23px;
+            }
+            
+            &--white{
+                background-color: #fff;
+                color: $secondary_color;
+                text-shadow:none;
+                @extend .font-bold;
+            }
+            
+        }
+        
+    }
+    
+    &__title{
+        margin: 0;
+        
+        span{
+            display: inline-block;
+            background-color: transparentize($secondary_color, 0.3);
+            padding: 8px 10px;
+            font-size: 35px;
+            margin-bottom: 10px;
+            
+            @include tablet{
+                margin-bottom: 15px;
+                font-size: 42px;
+            }
+            
+            @include laptop{
+                font-size: 55px;
+            }
+            
+        }
+        
+    }
+    
+    &__intro{
+        background-color: transparentize($secondary_color, 0.3);
+        padding: 8px 10px;
+        font-size: 21px;
+        margin: 0;
+        min-height: 100px;
+        
+        @include tablet{
+            height: 155px;
+            font-size: 25px;
+        }
+
+        @include laptop{
+            font-size: 30px;
+            height: 180px;
+        }
+        
+    }
+    
+    &__button{
+        width: 30px;
+        height: 30px;
+        background-color: $secondary_color;
+        position: relative;
+        
+        &:before, &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: $dark_color;
+            transition: all 0.4s ease;
+        }
+        
+        &:before{
+            width: 50%;
+            height: 2px;
+        }
+        
+        &:after{
+            width: 2px;
+            height: 50%;
+        }
+        
+    }
+    
+}

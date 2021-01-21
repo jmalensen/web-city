@@ -1,0 +1,74 @@
+.dateSearch{
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    @extend .clearfix;
+    
+    @media (min-width:500px){
+        max-width: 500px;
+    }
+    
+    &__title{
+        margin: 0 0 10px;
+        @extend .font-bold;
+        font-size: 22px;
+        line-height: 1;
+        
+        @include tablet{
+            font-size: 23px;
+        }
+        
+        @include laptop{
+            font-size: 28px;
+        }
+        
+    }
+    
+    .fieldGroup{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        float: left;
+        
+        &--second{
+            width: calc(100% - 50px);
+        }
+        
+        @media (min-width:500px){
+            width: calc(50% - 25px);
+            
+            &.fieldGroup--second{
+                width: calc(50% - 25px);
+            }
+            
+        }
+        
+    }
+    
+    label{
+        padding: 0 5px;
+    }
+    
+    input[type="date"]{
+        text-transform: uppercase;
+        height: 50px;
+        width: 90%;
+    }
+    
+    input[type="submit"]{
+        height: 50px;
+        width: 50px;
+        background-color: $dark-color;
+        color: $light-color;
+        text-transform: uppercase;
+        @extend .font-bold;
+        transition: background 0.2s ease;
+        float: left;
+        
+        &:hover, &:focus{
+            background-color: $tertiary-color;
+        }
+        
+    }
+    
+}

@@ -1,0 +1,139 @@
+body.home {
+    
+    .usefulClic{
+        
+        padding: 30px 0 0;
+        
+        @include tablet{
+            padding: 110px 0 180px;
+            background-image: url('../images/bg_dots_yellow.svg'), url('../images/bg_waves_yellow.svg');
+            background-position: top right, left bottom;
+            background-repeat: no-repeat;
+            background-size: 30% auto, 45% auto;
+            @media (min-width: 1300px) {
+                background-size: 380px auto, 420px auto;
+            }
+        }
+        
+        h2{
+            font-size: 60px;
+            margin: 0 0 20px;
+            text-align: center;
+            
+            @include tablet{
+                text-align: left;
+            }
+            
+        }
+        
+        &__row{
+            margin-bottom: 0;
+            
+            @include tablet{
+                margin-bottom: 20px;
+            }
+            
+            &:last-child{
+                margin-bottom: 0;
+            }
+            
+            > div{
+                padding: 0;
+                @include tablet{
+                    padding: 0 10px;
+                }
+            }
+            
+        }
+        
+        .oneClick{
+            
+            @include tablet{
+                margin-top: 20px;
+            }
+        }
+        
+    }
+    
+    .homeEvent{
+        
+        padding: 30px 0;
+        
+        @include tablet{
+            padding: 110px 0;
+            background-image: url('../images/bg_squares.svg'), url('../images/bg_sea_waves.svg');
+            background-position: top 20px right 20px, left bottom 150px;
+            background-repeat: no-repeat;
+            background-size: 30% auto, 40% auto;
+            @media (min-width: 1300px) {
+                background-size: 380px auto, 400px auto;
+            }
+        }
+        
+        h2{
+            font-size: 60px;
+            margin: 0 0 20px;
+            text-align: center;
+            
+            @include tablet{
+                text-align: left;
+            }
+            
+        }
+        
+        .social{
+            margin-top: 25px;            
+        }
+        
+    }
+    
+    .workStudy{
+        
+        padding: 30px 0 0;
+        
+        @include tablet{
+            padding: 110px 0 180px;
+            background-image: url('../images/bg_circle.svg'), url('../images/bg_stripes.svg');
+            background-position: top right, left bottom;
+            background-repeat: no-repeat;
+            background-size: 30% auto, 45% auto;
+            @media (min-width: 1300px) {
+                background-size: 380px auto, 420px auto;
+            }
+        }
+        
+        h2{
+            font-size: 60px;
+            margin: 0 0 20px;
+            text-align: center;
+            line-height: 1;
+            
+            @include tablet{
+                text-align: left;
+            }
+            
+        }
+        
+        &__row{
+            margin-bottom: 0;
+            
+            @include tablet{
+                margin-bottom: 20px;
+            }
+            
+            &:last-child{
+                margin-bottom: 0;
+            }
+            
+            > div{
+                padding: 0;
+                @include tablet{
+                    padding: 0 10px;
+                }
+            }
+            
+        }
+        
+    }
+	
+}

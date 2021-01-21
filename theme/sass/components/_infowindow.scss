@@ -1,0 +1,171 @@
+.infoWindow{
+    position: relative;
+    padding: 20px 30px 20px 20px;
+    @extend .font-noyh;
+    
+    &__category{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        
+        span{
+            background-color: $light-color;
+            color: $map-color;
+            border: 2px solid $map-color;
+            padding: 4px 6px;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 18px;
+            margin-left: 0;
+            
+        }
+        
+    }
+    
+    &__title{
+        margin: 0;
+        color: $light-color;
+        font-size: 28px;
+        @extend .font-bold;
+    }
+    
+    &__description{
+        color: $light-color;
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 1;
+    }
+    
+    &__link{
+        display: block;
+        color: $light-color;
+        font-size: 23px;
+        margin-top: 25px;
+        transition: transform 0.3s ease;
+        
+        &:hover, &:focus{
+            color: $light-color;
+            text-decoration: none;
+            transform: translateX(10px);
+        }
+        
+    }
+    
+}
+
+.custom-iw{
+    width:300px !important;
+}
+
+.custom-iw .gm-style-iw {
+  top:0 !important;
+  left:5px !important;
+  border-radius:2px;
+    overflow: visible !important;
+    
+    @media(min-width: 450px){
+        left:20px !important;
+    }
+    
+    *{
+        overflow: visible !important;
+    }
+    
+}
+.custom-iw>div:first-child>div:nth-child(2) {
+  display:none;
+}
+
+.custom-iw>div:first-child>div:first-child, .custom-iw>div:first-child>div:nth-child(3) {
+  //left: 160px !important;
+}
+
+.custom-iw .gm-style-iw, .custom-iw .gm-style-iw>div, .custom-iw .gm-style-iw>div>div {
+  width:100% !important;
+  max-width:100% !important;
+}
+/** set here the width **/
+.custom-iw, .custom-iw>div:first-child>div:last-child {
+  width:300px !important;
+}
+.custom-iw>div:first-child>div:last-child {
+  left:5px !important;
+  top:0px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px;
+  z-index:-1 !important;
+    
+    @media(min-width: 450px){
+        left:20px !important;
+    }
+    
+}
+/** set here the desired background-color **/
+#div-main-infoWindow, .custom-iw>div:first-child>div:nth-child(n-1)>div>div, .custom-iw>div>div:last-child, .custom-iw .gm-style-iw, .custom-iw .gm-style-iw>div, .custom-iw .gm-style-iw>div>div {
+  background-color:$map-color !important;
+}
+
+
+/** close-button **/
+.custom-iw>div:nth-child(3) {
+  top:5px !important;
+  right:0px !important;
+    
+    @media(min-width: 450px){
+        right:-15px !important;
+    }
+    
+    img{
+        display: none;
+    }
+    
+    opacity: 1 !important;
+    position: absolute;
+	display: inline-block;
+	transform: rotate(45deg);
+	transform-origin: center;
+	width: 32px !important;
+	height: 32px!important;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	z-index: 100;
+    outline: none;
+	transition: all 0.25s ease;
+	box-shadow: none;
+	text-indent: -7777px;
+	overflow: hidden;
+    order:-1;
+    cursor: pointer;
+    @include tablet {
+    	top: auto;
+    	bottom: -60px;
+    }
+	&:before, &:after {
+        content: "";
+		position: absolute;
+		left: 0;
+		display: inline-block;
+		width: 60%;
+		height: 2px;
+		background-color: $light-color;
+        transition: all 0.25s ease;
+        top: 50%;
+		left: 50%;
+    	transform: translateY(-50%) translateX(-50%);
+	}
+		
+    &:after {
+        transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    }
+    
+    &:hover{
+        
+        
+        &:before, &:after {
+            
+        }
+        
+    }
+}

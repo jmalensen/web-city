@@ -1,0 +1,42 @@
+.interactiveMap{
+    
+    &__search{
+        padding: 30px 0;
+        background: transparent url('../images/bg_green_dots.svg') left top repeat;
+        background-size: 6px;
+        
+        @include tablet{
+            padding: 50px 0;
+        }
+
+        .keywordSearch{
+            margin-top: 35px;
+        }
+        
+    }
+    
+    &__map{
+        height: 100vh;
+        
+        &.no_marker{
+            height: auto;
+        }
+        
+        &__message{
+            margin: 0;
+            padding: 50px 15px;
+            text-align: center;
+            color: $map-color;
+            @extend .font-bold;
+            font-size: 28px;
+            
+            @include tablet{
+                font-size: 35px;
+                padding: 60px 20px;
+            }
+            
+        }
+        
+    }
+    
+}

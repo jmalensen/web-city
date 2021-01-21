@@ -1,0 +1,88 @@
+body.search {
+    a{
+        text-decoration:none;
+        .title{
+            padding-bottom:2px;
+            transition:color 0.3s;
+        }
+        &:hover, &:focus{
+            .title{
+                display: inline-block;
+                padding-bottom:0px;
+                
+                color:$tertiary_color;
+                border-bottom: 2px solid $tertiary_color;
+            }
+        }
+    }
+    .resultsSearch{
+        padding:0 0 30px 0;
+        
+        color:$primary_color;
+        &__title{
+            margin-bottom: 20px;
+            
+            font-size:$font_size_large;
+        }
+        &__type{
+            margin-bottom: 30px;
+            padding-bottom: 5px;
+            
+            border-bottom:1px solid $primary_color;
+            &__title{
+                margin-bottom: 15px;
+                
+                font-size:30px;
+                border-bottom:1px solid $primary_color;
+            }
+            &__item{
+                display:block;
+                h3{
+                    font-size:28px;
+                }
+            }
+        }
+    }
+    
+    @include tablet{
+        .resultsSearch{
+            &__title{
+                margin-bottom: 30px;
+
+                font-size:$font_size_larger;
+            }
+            &__type{
+                &__title{
+                    font-size:$font_size_large;
+                }
+            }
+        }
+    }
+    
+    @include laptop{
+        .resultsSearch{
+            &__title{
+                font-size:$font_size_largest;
+            }
+            &__type{
+                &__title{
+                    font-size:$font_size_larger;
+                }
+            }
+        }
+        
+        
+        .searchresults{
+            background-image: url('../images/bg_yellow_circle.svg'), url('../images/bg_blue_circle.svg');
+            background-position: top right, bottom left;
+            background-repeat: no-repeat;
+            background-size: 30% auto, 35% auto;
+            @media (min-width: 1300px) {
+                background-size: 360px auto, 380px auto;
+            }
+            .container{
+                background:$light_color;
+            }
+        }
+    }
+}

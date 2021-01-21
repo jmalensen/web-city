@@ -1,0 +1,172 @@
+.banner{
+    
+    height: 250px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    
+    @include tablet{
+        height: 300px;
+    }
+    
+    @include laptop{
+        height: 330px;
+    }
+    
+    @include desktop{
+        height: 360px;
+    }
+    
+    @media (min-width:1400px){
+        height: 450px;
+    }
+    
+    .container{
+        position: relative;
+        height: 100%;
+    }
+    
+    &__video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 110%;
+        
+        @media (min-width:500px){
+            height: auto;
+            width: 100%;
+        }
+        
+    }
+    
+    &__content{
+        
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $light_color;
+        display: block;
+        max-width: 450px;
+        z-index: 20;
+        @extend .font-bold;
+        
+        @include tablet{
+            left: 15px;
+            width: 65%;
+            max-width: none;
+        }
+        
+        @include laptop{
+            width: 60%;
+        }
+        
+    }
+    
+    &__category{
+        font-size: 0;
+    }
+    
+    &__event{
+        margin-top: 5px;
+    }
+    
+    &__news{
+        margin-top: 5px;
+    }
+    
+    &__info{
+        margin: 0;
+        display: inline-block;
+        padding: 5px 8px;
+        background-color: #fff;
+        color: $secondary_color;
+        text-transform: uppercase;
+        font-size: 15px;
+
+        @include tablet{
+            font-size: 18px;
+        }
+
+        @include laptop{
+            font-size: 23px;
+        }
+    }
+    
+    &__title{
+        
+        margin: 0;
+        
+        span{
+            display: inline-block;
+            background-color: transparentize($secondary_color, 0.3);
+            padding: 8px 10px;
+            font-size: 35px;
+            margin-top: 5px;
+            
+            @include tablet{
+                font-size: 42px;
+            }
+            
+            @include laptop{
+                font-size: 55px;
+            }
+            
+        }
+        
+    }
+    
+}
+
+.page-template-archive-directory{
+    .banner{
+        
+        &__info{
+            color: $directory-color;
+        }
+        
+        &__title{
+            span{
+                background-color: transparentize($directory-color, 0.3);
+            }
+        }
+        
+    }
+}
+
+.page-template-page-interactive-map{
+    .banner{
+        
+        &__info{
+            color: $map-color;
+        }
+        
+        &__title{
+            span{
+                background-color: transparentize($map-color, 0.3);
+            }
+        }
+        
+    }
+}
+
+.page-template-archive-news{
+    .banner{
+        
+        &__info{
+            color: $tertiary_color;
+        }
+        
+        &__title{
+            span{
+                background-color: transparentize($tertiary_color, 0.3);
+            }
+        }
+        
+    }
+}
